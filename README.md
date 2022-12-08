@@ -1,6 +1,6 @@
 #  MongoDB + GPT3 Query Gen
 
-## Login Page
+### Login Page
 
-![Login Page](Images/login.png)
+![Login Page](Images/login.png | width=50)
 
