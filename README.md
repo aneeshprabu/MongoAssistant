@@ -2,5 +2,5 @@
 
 ## Login Page
 
-[Login Page](Images/login.png)
+![Login Page](Images/login.png)
 
