@@ -2,5 +2,5 @@
 
 ### Login Page
 
-![Login Page](Images/login.png | width=50)
+<img src="Images/login.png" width=50% height=50%>
 
