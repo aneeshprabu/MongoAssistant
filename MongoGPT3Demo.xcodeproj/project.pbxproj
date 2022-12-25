@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A73B27F9294EB00D00769DD6 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B27F8294EB00D00769DD6 /* HomeScreenView.swift */; };
+		A77D10CA2958D4A3002C9DD4 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C32958D4A3002C9DD4 /* house.riv */; };
+		A77D10CB2958D4A3002C9DD4 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C42958D4A3002C9DD4 /* confetti.riv */; };
+		A77D10CC2958D4A3002C9DD4 /* check.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C52958D4A3002C9DD4 /* check.riv */; };
+		A77D10CD2958D4A3002C9DD4 /* menu_button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C62958D4A3002C9DD4 /* menu_button.riv */; };
+		A77D10D02958D4A3002C9DD4 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C92958D4A3002C9DD4 /* icons.riv */; };
+		A77D10D32958D509002C9DD4 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = A77D10D22958D509002C9DD4 /* RiveRuntime */; };
+		A77D10D52958D527002C9DD4 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10D42958D527002C9DD4 /* onBoardingView.swift */; };
+		A77D10D72958D59A002C9DD4 /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10D62958D59A002C9DD4 /* shapes.riv */; };
+		A77D10D92958E455002C9DD4 /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10D82958E455002C9DD4 /* button.riv */; };
+		A77D10DE2958E965002C9DD4 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DB2958E964002C9DD4 /* Inter-Regular.ttf */; };
+		A77D10DF2958E965002C9DD4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DC2958E964002C9DD4 /* Poppins-Bold.ttf */; };
+		A77D10E02958E965002C9DD4 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DD2958E964002C9DD4 /* Inter-SemiBold.ttf */; };
+		A77D10E32958ECA6002C9DD4 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10E22958ECA6002C9DD4 /* CustomFont.swift */; };
 		A78559CE2941684C005239A2 /* MongoGPT3DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */; };
-		A78559D02941684C005239A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78559CF2941684C005239A2 /* ContentView.swift */; };
+		A78559D02941684C005239A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78559CF2941684C005239A2 /* LoginView.swift */; };
 		A78559D22941684E005239A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78559D12941684E005239A2 /* Assets.xcassets */; };
 		A78559D52941684E005239A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78559D42941684E005239A2 /* Preview Assets.xcassets */; };
 		A78559DC29417E42005239A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A78559DB29417E42005239A2 /* README.md */; };
@@ -19,9 +33,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A73B27F8294EB00D00769DD6 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		A77D10C32958D4A3002C9DD4 /* house.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.riv; sourceTree = "<group>"; };
+		A77D10C42958D4A3002C9DD4 /* confetti.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.riv; sourceTree = "<group>"; };
+		A77D10C52958D4A3002C9DD4 /* check.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = check.riv; sourceTree = "<group>"; };
+		A77D10C62958D4A3002C9DD4 /* menu_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_button.riv; sourceTree = "<group>"; };
+		A77D10C92958D4A3002C9DD4 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
+		A77D10D42958D527002C9DD4 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
+		A77D10D62958D59A002C9DD4 /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
+		A77D10D82958E455002C9DD4 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
+		A77D10DB2958E964002C9DD4 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		A77D10DC2958E964002C9DD4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		A77D10DD2958E964002C9DD4 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		A77D10E12958EA04002C9DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A77D10E22958ECA6002C9DD4 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		A78559CA2941684C005239A2 /* MongoGPT3Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongoGPT3Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoGPT3DemoApp.swift; sourceTree = "<group>"; };
-		A78559CF2941684C005239A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A78559CF2941684C005239A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A78559D12941684E005239A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A78559D42941684E005239A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A78559DB29417E42005239A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -34,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A78559F929418E75005239A2 /* RealmSwift in Frameworks */,
+				A77D10D32958D509002C9DD4 /* RiveRuntime in Frameworks */,
 				A78559FC294195DE005239A2 /* OpenAISwift in Frameworks */,
 				A78559F729418E75005239A2 /* Realm in Frameworks */,
 			);
@@ -42,6 +71,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A73B27F7294EAFEE00769DD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A73B27F8294EB00D00769DD6 /* HomeScreenView.swift */,
+				A77D10D42958D527002C9DD4 /* onBoardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A77D10C22958D4A3002C9DD4 /* RiveAssets */ = {
+			isa = PBXGroup;
+			children = (
+				A77D10C32958D4A3002C9DD4 /* house.riv */,
+				A77D10C42958D4A3002C9DD4 /* confetti.riv */,
+				A77D10C52958D4A3002C9DD4 /* check.riv */,
+				A77D10C62958D4A3002C9DD4 /* menu_button.riv */,
+				A77D10D82958E455002C9DD4 /* button.riv */,
+				A77D10D62958D59A002C9DD4 /* shapes.riv */,
+				A77D10C92958D4A3002C9DD4 /* icons.riv */,
+			);
+			path = RiveAssets;
+			sourceTree = "<group>";
+		};
+		A77D10DA2958E964002C9DD4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A77D10DB2958E964002C9DD4 /* Inter-Regular.ttf */,
+				A77D10DC2958E964002C9DD4 /* Poppins-Bold.ttf */,
+				A77D10DD2958E964002C9DD4 /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A77D10E42958EF1C002C9DD4 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				A77D10E22958ECA6002C9DD4 /* CustomFont.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		A78559C12941684C005239A2 = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +133,14 @@
 		A78559CC2941684C005239A2 /* MongoGPT3Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A77D10E12958EA04002C9DD4 /* Info.plist */,
 				A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */,
-				A78559CF2941684C005239A2 /* ContentView.swift */,
+				A78559CF2941684C005239A2 /* LoginView.swift */,
+				A73B27F7294EAFEE00769DD6 /* Views */,
 				A78559D12941684E005239A2 /* Assets.xcassets */,
+				A77D10E42958EF1C002C9DD4 /* Styles */,
+				A77D10DA2958E964002C9DD4 /* Fonts */,
+				A77D10C22958D4A3002C9DD4 /* RiveAssets */,
 				A78559D32941684E005239A2 /* Preview Content */,
 			);
 			path = MongoGPT3Demo;
@@ -107,6 +182,7 @@
 				A78559F629418E75005239A2 /* Realm */,
 				A78559F829418E75005239A2 /* RealmSwift */,
 				A78559FB294195DE005239A2 /* OpenAISwift */,
+				A77D10D22958D509002C9DD4 /* RiveRuntime */,
 			);
 			productName = MongoGPT3Demo;
 			productReference = A78559CA2941684C005239A2 /* MongoGPT3Demo.app */;
@@ -139,6 +215,7 @@
 			packageReferences = (
 				A78559F529418E75005239A2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				A78559FA294195DE005239A2 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				A77D10D12958D508002C9DD4 /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = A78559CB2941684C005239A2 /* Products */;
 			projectDirPath = "";
@@ -155,9 +232,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A78559DF29417EDC005239A2 /* login.png in Resources */,
+				A77D10CB2958D4A3002C9DD4 /* confetti.riv in Resources */,
+				A77D10CA2958D4A3002C9DD4 /* house.riv in Resources */,
+				A77D10D72958D59A002C9DD4 /* shapes.riv in Resources */,
 				A78559DC29417E42005239A2 /* README.md in Resources */,
 				A78559D52941684E005239A2 /* Preview Assets.xcassets in Resources */,
+				A77D10E02958E965002C9DD4 /* Inter-SemiBold.ttf in Resources */,
+				A77D10CC2958D4A3002C9DD4 /* check.riv in Resources */,
+				A77D10CD2958D4A3002C9DD4 /* menu_button.riv in Resources */,
+				A77D10DF2958E965002C9DD4 /* Poppins-Bold.ttf in Resources */,
 				A78559D22941684E005239A2 /* Assets.xcassets in Resources */,
+				A77D10D02958D4A3002C9DD4 /* icons.riv in Resources */,
+				A77D10DE2958E965002C9DD4 /* Inter-Regular.ttf in Resources */,
+				A77D10D92958E455002C9DD4 /* button.riv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78559D02941684C005239A2 /* ContentView.swift in Sources */,
+				A77D10E32958ECA6002C9DD4 /* CustomFont.swift in Sources */,
+				A73B27F9294EB00D00769DD6 /* HomeScreenView.swift in Sources */,
+				A77D10D52958D527002C9DD4 /* onBoardingView.swift in Sources */,
+				A78559D02941684C005239A2 /* LoginView.swift in Sources */,
 				A78559CE2941684C005239A2 /* MongoGPT3DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -280,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -301,11 +391,13 @@
 				DEVELOPMENT_TEAM = N29A2CP236;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MongoGPT3Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,11 +422,13 @@
 				DEVELOPMENT_TEAM = N29A2CP236;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MongoGPT3Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,6 +466,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A77D10D12958D508002C9DD4 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		A78559F529418E75005239A2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -391,6 +493,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A77D10D22958D509002C9DD4 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A77D10D12958D508002C9DD4 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
 		A78559F629418E75005239A2 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A78559F529418E75005239A2 /* XCRemoteSwiftPackageReference "realm-swift" */;

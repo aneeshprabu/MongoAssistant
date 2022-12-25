@@ -11,7 +11,7 @@ import SwiftUI
 struct MongoGPT3DemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
