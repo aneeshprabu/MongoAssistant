@@ -21,6 +21,9 @@
 		A77D10DF2958E965002C9DD4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DC2958E964002C9DD4 /* Poppins-Bold.ttf */; };
 		A77D10E02958E965002C9DD4 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DD2958E964002C9DD4 /* Inter-SemiBold.ttf */; };
 		A77D10E32958ECA6002C9DD4 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10E22958ECA6002C9DD4 /* CustomFont.swift */; };
+		A77D10E629591CC3002C9DD4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10E529591CC3002C9DD4 /* SignInView.swift */; };
+		A77D10E82959223B002C9DD4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10E72959223B002C9DD4 /* CustomTextField.swift */; };
+		A77D10EA29592410002C9DD4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10E929592410002C9DD4 /* Extensions.swift */; };
 		A78559CE2941684C005239A2 /* MongoGPT3DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */; };
 		A78559D02941684C005239A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78559CF2941684C005239A2 /* LoginView.swift */; };
 		A78559D22941684E005239A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78559D12941684E005239A2 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		A77D10DD2958E964002C9DD4 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		A77D10E12958EA04002C9DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A77D10E22958ECA6002C9DD4 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		A77D10E529591CC3002C9DD4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		A77D10E72959223B002C9DD4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A77D10E929592410002C9DD4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A78559CA2941684C005239A2 /* MongoGPT3Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongoGPT3Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoGPT3DemoApp.swift; sourceTree = "<group>"; };
 		A78559CF2941684C005239A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			children = (
 				A73B27F8294EB00D00769DD6 /* HomeScreenView.swift */,
 				A77D10D42958D527002C9DD4 /* onBoardingView.swift */,
+				A77D10E529591CC3002C9DD4 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				A77D10E22958ECA6002C9DD4 /* CustomFont.swift */,
+				A77D10E72959223B002C9DD4 /* CustomTextField.swift */,
+				A77D10E929592410002C9DD4 /* Extensions.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -255,7 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77D10E82959223B002C9DD4 /* CustomTextField.swift in Sources */,
+				A77D10E629591CC3002C9DD4 /* SignInView.swift in Sources */,
 				A77D10E32958ECA6002C9DD4 /* CustomFont.swift in Sources */,
+				A77D10EA29592410002C9DD4 /* Extensions.swift in Sources */,
 				A73B27F9294EB00D00769DD6 /* HomeScreenView.swift in Sources */,
 				A77D10D52958D527002C9DD4 /* onBoardingView.swift in Sources */,
 				A78559D02941684C005239A2 /* LoginView.swift in Sources */,
