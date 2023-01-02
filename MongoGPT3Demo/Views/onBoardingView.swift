@@ -25,7 +25,7 @@ struct onBoardingView: View {
                 .ignoresSafeArea()
             
             if showModal {
-                SignInView()
+                SignInView(showModal: $showModal)
                     .transition(
                         .move(edge: .top)
                         .combined(with: .opacity)

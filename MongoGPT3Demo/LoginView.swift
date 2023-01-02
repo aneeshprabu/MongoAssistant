@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
 import OpenAISwift
 
 struct LoginView: View {
@@ -68,7 +67,7 @@ struct MongoLoginView: View {
             }) {
                 
                 NavigationLink {
-                    HomeScreenView().navigationBarBackButtonHidden(true)
+                    MenuIcon().navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Connect")
                         .frame(minWidth: 0, maxWidth: 150)
