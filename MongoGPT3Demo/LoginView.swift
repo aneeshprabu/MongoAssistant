@@ -67,7 +67,7 @@ struct MongoLoginView: View {
             }) {
                 
                 NavigationLink {
-                    MenuIcon().navigationBarBackButtonHidden(true)
+                    ContentView().navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Connect")
                         .frame(minWidth: 0, maxWidth: 150)
@@ -90,7 +90,7 @@ struct MongoLoginView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MongoLoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }

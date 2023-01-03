@@ -7,10 +7,13 @@
 
 import SwiftUI
 import RiveRuntime
+import Alamofire
+import SwiftyJSON
 
 struct SignInView: View {
     
     @State var uri = ""
+    let mongoApiUrl = "https://mongo-assistant-app.azurewebsites.net/uri"
     
     // For SignIn process
     @State var isLoading = false
@@ -19,38 +22,65 @@ struct SignInView: View {
     
     @Binding var showModal: Bool
     
+    fileprivate func showError() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            check.triggerInput("Error")
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            isLoading = false
+            check.stop()
+        })
+    }
+    
     func logIn() {
         isLoading = true
         
         if uri != "" {
             
-            // TODO: - Do mongo login using backend.
-            var login = true
-            @AppStorage("MongoURI") var mongoURI: String = uri
+            let parameters: Parameters = [
+                "uri" : uri
+            ]
             
-            if login {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    check.triggerInput("Check")
-                })
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-                    isLoading = false
-                    confetti.triggerInput("Trigger explosion")
-                })
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
-                    withAnimation {
-                        showModal = false
+            //Mark: - Post request to check MongoURI is working
+            AF.request(mongoApiUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 600).responseData { response in
+                    switch response.result {
+                        case .success(let data):
+                        do {
+                            var json = try JSON(data: data)
+                            
+                            if json["Data"] == "Connection is successful" {
+                                print(json["Data"])
+                                @AppStorage("MongoURI") var mongoURI: String = uri
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                                    check.triggerInput("Check")
+                                })
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+                                    isLoading = false
+                                    confetti.triggerInput("Trigger explosion")
+                                })
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+                                    withAnimation {
+                                        showModal = false
+                                    }
+                                })
+                            }
+                            else {
+                                showError()
+                            }
+                        }
+                        catch {
+                            showError()
+                        }
+
+                        case .failure(let error):
+                            print(error)
+                        showError()
                     }
-                })
-            }
+                }
         }
         else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                check.triggerInput("Error")
-            })
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-                isLoading = false
-                check.stop()
-            })
+            showError()
         }
         
         
@@ -58,10 +88,10 @@ struct SignInView: View {
     
     var body: some View {
         VStack(spacing: 24) {
-            Text("Sign In")
+            Text("Connect to Atlas")
                 .customFont(.largeTitle)
             
-            Text("Using MongoDB URI your queries generated through ChatGPT can be used to query your database and gather results.")
+            Text("Connecting to Atlas lets you execute queries generated")
                 .customFont(.headline)
             
             VStack(alignment: .leading) {
@@ -77,7 +107,7 @@ struct SignInView: View {
                 logIn()
                 
             } label: {
-                Label("Connect", systemImage: "arrow.right")
+                Label("Connect", systemImage: "app.connected.to.app.below.fill")
                     .customFont(.headline)
                     .padding(20)
                     .frame(maxWidth: .infinity)
@@ -91,20 +121,17 @@ struct SignInView: View {
             
             HStack {
                 Rectangle().frame(height: 1).opacity(0.1)
-                Text("OR").customFont(.subheadline2).foregroundColor(.black.opacity(0.3))
+                Text("How to connect").customFont(.subheadline2).foregroundColor(.black.opacity(0.3))
                 Rectangle().frame(height: 1).opacity(0.1)
             }
             
-            Text("Skip this step. Limited features will be available")
+            Text("Get the connection string from Connect > Connect your application > Copy URI from step 2. Use the below documentation for additional help")
                 .customFont(.subheadline)
                 .foregroundColor(.secondary)
             
-            Button {
-                
-            } label: {
-                Text("Skip").customFont(.subheadline)
+            Link(destination: URL(string: "https://www.mongodb.com/docs/atlas/driver-connection/#connect-your-application")!) {
+                Text("Documentation").customFont(.subheadline)
             }
-            
         }
         .padding(30)
         .background(.regularMaterial)

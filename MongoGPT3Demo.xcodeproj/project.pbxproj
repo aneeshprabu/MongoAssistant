@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A73B27F9294EB00D00769DD6 /* MenuIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B27F8294EB00D00769DD6 /* MenuIcon.swift */; };
+		A73B27F9294EB00D00769DD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B27F8294EB00D00769DD6 /* ContentView.swift */; };
 		A750B204295F5816002AD45A /* MongoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B203295F5816002AD45A /* MongoData.swift */; };
 		A750B206295F5848002AD45A /* ChatGPTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B205295F5848002AD45A /* ChatGPTData.swift */; };
 		A750B209295F5AF9002AD45A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A750B208295F5AF9002AD45A /* Alamofire */; };
@@ -16,14 +16,15 @@
 		A750B211296284B8002AD45A /* CourseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B20F296284B8002AD45A /* CourseSection.swift */; };
 		A750B212296284B8002AD45A /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B210296284B8002AD45A /* Feature.swift */; };
 		A750B21429628F07002AD45A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B21329628F07002AD45A /* HomeView.swift */; };
+		A750B217296353C1002AD45A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A750B216296353C1002AD45A /* SwiftyJSON */; };
+		A750B22129636A3D002AD45A /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A750B22029636A3D002AD45A /* button.riv */; };
 		A77D10CA2958D4A3002C9DD4 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C32958D4A3002C9DD4 /* house.riv */; };
 		A77D10CB2958D4A3002C9DD4 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C42958D4A3002C9DD4 /* confetti.riv */; };
 		A77D10CC2958D4A3002C9DD4 /* check.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C52958D4A3002C9DD4 /* check.riv */; };
 		A77D10D02958D4A3002C9DD4 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10C92958D4A3002C9DD4 /* icons.riv */; };
 		A77D10D32958D509002C9DD4 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = A77D10D22958D509002C9DD4 /* RiveRuntime */; };
-		A77D10D52958D527002C9DD4 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10D42958D527002C9DD4 /* onBoardingView.swift */; };
+		A77D10D52958D527002C9DD4 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10D42958D527002C9DD4 /* OnBoardingView.swift */; };
 		A77D10D72958D59A002C9DD4 /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10D62958D59A002C9DD4 /* shapes.riv */; };
-		A77D10D92958E455002C9DD4 /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A77D10D82958E455002C9DD4 /* button.riv */; };
 		A77D10DE2958E965002C9DD4 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DB2958E964002C9DD4 /* Inter-Regular.ttf */; };
 		A77D10DF2958E965002C9DD4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DC2958E964002C9DD4 /* Poppins-Bold.ttf */; };
 		A77D10E02958E965002C9DD4 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77D10DD2958E964002C9DD4 /* Inter-SemiBold.ttf */; };
@@ -38,10 +39,12 @@
 		A78559DC29417E42005239A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A78559DB29417E42005239A2 /* README.md */; };
 		A78559DF29417EDC005239A2 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = A78559DE29417EDC005239A2 /* login.png */; };
 		A78559FC294195DE005239A2 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = A78559FB294195DE005239A2 /* OpenAISwift */; };
+		A7E456D8296379B8005AE2BE /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E456D7296379B8005AE2BE /* SideMenu.swift */; };
+		A7E456DA2963BD0A005AE2BE /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E456D92963BD0A005AE2BE /* MenuRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A73B27F8294EB00D00769DD6 /* MenuIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuIcon.swift; sourceTree = "<group>"; };
+		A73B27F8294EB00D00769DD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A750B203295F5816002AD45A /* MongoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoData.swift; sourceTree = "<group>"; };
 		A750B205295F5848002AD45A /* ChatGPTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTData.swift; sourceTree = "<group>"; };
 		A750B20A29627ECB002AD45A /* menu_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_button.riv; sourceTree = "<group>"; };
@@ -49,13 +52,13 @@
 		A750B20F296284B8002AD45A /* CourseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSection.swift; sourceTree = "<group>"; };
 		A750B210296284B8002AD45A /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		A750B21329628F07002AD45A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A750B22029636A3D002AD45A /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
 		A77D10C32958D4A3002C9DD4 /* house.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.riv; sourceTree = "<group>"; };
 		A77D10C42958D4A3002C9DD4 /* confetti.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.riv; sourceTree = "<group>"; };
 		A77D10C52958D4A3002C9DD4 /* check.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = check.riv; sourceTree = "<group>"; };
 		A77D10C92958D4A3002C9DD4 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
-		A77D10D42958D527002C9DD4 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
+		A77D10D42958D527002C9DD4 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		A77D10D62958D59A002C9DD4 /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
-		A77D10D82958E455002C9DD4 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
 		A77D10DB2958E964002C9DD4 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		A77D10DC2958E964002C9DD4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		A77D10DD2958E964002C9DD4 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 		A78559D42941684E005239A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A78559DB29417E42005239A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A78559DE29417EDC005239A2 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		A7E456D7296379B8005AE2BE /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		A7E456D92963BD0A005AE2BE /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 			files = (
 				A750B209295F5AF9002AD45A /* Alamofire in Frameworks */,
 				A77D10D32958D509002C9DD4 /* RiveRuntime in Frameworks */,
+				A750B217296353C1002AD45A /* SwiftyJSON in Frameworks */,
 				A78559FC294195DE005239A2 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,9 +96,11 @@
 		A73B27F7294EAFEE00769DD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A77D10D42958D527002C9DD4 /* onBoardingView.swift */,
+				A77D10D42958D527002C9DD4 /* OnBoardingView.swift */,
 				A77D10E529591CC3002C9DD4 /* SignInView.swift */,
-				A73B27F8294EB00D00769DD6 /* MenuIcon.swift */,
+				A73B27F8294EB00D00769DD6 /* ContentView.swift */,
+				A7E456D7296379B8005AE2BE /* SideMenu.swift */,
+				A7E456D92963BD0A005AE2BE /* MenuRow.swift */,
 				A750B21329628F07002AD45A /* HomeView.swift */,
 				A750B20C2962848D002AD45A /* VCard.swift */,
 			);
@@ -123,8 +131,8 @@
 				A77D10C32958D4A3002C9DD4 /* house.riv */,
 				A77D10C42958D4A3002C9DD4 /* confetti.riv */,
 				A750B20A29627ECB002AD45A /* menu_button.riv */,
+				A750B22029636A3D002AD45A /* button.riv */,
 				A77D10C52958D4A3002C9DD4 /* check.riv */,
-				A77D10D82958E455002C9DD4 /* button.riv */,
 				A77D10D62958D59A002C9DD4 /* shapes.riv */,
 				A77D10C92958D4A3002C9DD4 /* icons.riv */,
 			);
@@ -223,6 +231,7 @@
 				A78559FB294195DE005239A2 /* OpenAISwift */,
 				A77D10D22958D509002C9DD4 /* RiveRuntime */,
 				A750B208295F5AF9002AD45A /* Alamofire */,
+				A750B216296353C1002AD45A /* SwiftyJSON */,
 			);
 			productName = MongoGPT3Demo;
 			productReference = A78559CA2941684C005239A2 /* MongoGPT3Demo.app */;
@@ -256,6 +265,7 @@
 				A78559FA294195DE005239A2 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 				A77D10D12958D508002C9DD4 /* XCRemoteSwiftPackageReference "rive-ios" */,
 				A750B207295F5AF8002AD45A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A750B215296353C0002AD45A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = A78559CB2941684C005239A2 /* Products */;
 			projectDirPath = "";
@@ -272,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A78559DF29417EDC005239A2 /* login.png in Resources */,
+				A750B22129636A3D002AD45A /* button.riv in Resources */,
 				A77D10CB2958D4A3002C9DD4 /* confetti.riv in Resources */,
 				A77D10CA2958D4A3002C9DD4 /* house.riv in Resources */,
 				A77D10D72958D59A002C9DD4 /* shapes.riv in Resources */,
@@ -284,7 +295,6 @@
 				A77D10D02958D4A3002C9DD4 /* icons.riv in Resources */,
 				A77D10DE2958E965002C9DD4 /* Inter-Regular.ttf in Resources */,
 				A750B20B29627ECB002AD45A /* menu_button.riv in Resources */,
-				A77D10D92958E455002C9DD4 /* button.riv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,13 +310,15 @@
 				A77D10E82959223B002C9DD4 /* CustomTextField.swift in Sources */,
 				A750B206295F5848002AD45A /* ChatGPTData.swift in Sources */,
 				A77D10E629591CC3002C9DD4 /* SignInView.swift in Sources */,
+				A7E456DA2963BD0A005AE2BE /* MenuRow.swift in Sources */,
 				A77D10E32958ECA6002C9DD4 /* CustomFont.swift in Sources */,
 				A750B211296284B8002AD45A /* CourseSection.swift in Sources */,
 				A77D10EA29592410002C9DD4 /* Extensions.swift in Sources */,
 				A750B20D2962848D002AD45A /* VCard.swift in Sources */,
 				A750B204295F5816002AD45A /* MongoData.swift in Sources */,
-				A73B27F9294EB00D00769DD6 /* MenuIcon.swift in Sources */,
-				A77D10D52958D527002C9DD4 /* onBoardingView.swift in Sources */,
+				A73B27F9294EB00D00769DD6 /* ContentView.swift in Sources */,
+				A77D10D52958D527002C9DD4 /* OnBoardingView.swift in Sources */,
+				A7E456D8296379B8005AE2BE /* SideMenu.swift in Sources */,
 				A78559D02941684C005239A2 /* LoginView.swift in Sources */,
 				A78559CE2941684C005239A2 /* MongoGPT3DemoApp.swift in Sources */,
 			);
@@ -441,6 +453,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MongoGPT3Demo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Assistant;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -472,6 +485,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MongoGPT3Demo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Assistant;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -523,6 +537,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		A750B215296353C0002AD45A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		A77D10D12958D508002C9DD4 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios";
@@ -546,6 +568,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A750B207295F5AF8002AD45A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		A750B216296353C1002AD45A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A750B215296353C0002AD45A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 		A77D10D22958D509002C9DD4 /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
