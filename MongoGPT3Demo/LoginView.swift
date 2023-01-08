@@ -67,7 +67,7 @@ struct MongoLoginView: View {
             }) {
                 
                 NavigationLink {
-                    ContentView().navigationBarBackButtonHidden(true)
+//                    ContentView().navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Connect")
                         .frame(minWidth: 0, maxWidth: 150)

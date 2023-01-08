@@ -10,6 +10,24 @@
       }
     },
     {
+      "identity" : "codeeditor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ZeeZide/CodeEditor.git",
+      "state" : {
+        "revision" : "180bde07b44dea839b32873bd8586ba146fa9106",
+        "version" : "1.2.2"
+      }
+    },
+    {
+      "identity" : "highlightr",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/raspu/Highlightr",
+      "state" : {
+        "revision" : "93199b9e434f04bda956a613af8f571933f9f037",
+        "version" : "2.1.2"
+      }
+    },
+    {
       "identity" : "openaiswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adamrushy/OpenAISwift.git",
@@ -25,6 +43,24 @@
       "state" : {
         "revision" : "eabea238cba7242dd2fe69f45fcac01e3265775e",
         "version" : "3.1.3"
+      }
+    },
+    {
+      "identity" : "splash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Splash",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2e3f17c2d09689c8bf175c4a84ff7f2ad3353301"
+      }
+    },
+    {
+      "identity" : "swiftuix",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftUIX/SwiftUIX.git",
+      "state" : {
+        "revision" : "1c2ba19b91a1541b803f9d1b01b360cae5a752fa",
+        "version" : "0.1.3"
       }
     },
     {

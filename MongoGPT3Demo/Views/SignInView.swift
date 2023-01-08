@@ -13,7 +13,7 @@ import SwiftyJSON
 struct SignInView: View {
     
     @State var uri = ""
-    let mongoApiUrl = "https://mongo-assistant-app.azurewebsites.net/uri"
+    let mongoApiUrl = "https://mongo-assistant-app.azurewebsites.net/api/v1/uri"
     
     // For SignIn process
     @State var isLoading = false
@@ -41,14 +41,22 @@ struct SignInView: View {
                 "uri" : uri
             ]
             
+            // Checking
+            print("Parameters : \(parameters)")
+            
             //Mark: - Post request to check MongoURI is working
             AF.request(mongoApiUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 600).responseData { response in
                     switch response.result {
                         case .success(let data):
                         do {
-                            var json = try JSON(data: data)
+                            let json = try JSON(data: data)
+                            print(json, data)
                             
                             if json["Data"] == "Connection is successful" {
+                                
+                                // Persist the URI
+                                UserDefaults.standard.set(uri, forKey: "MongoURI")
+                                
                                 print(json["Data"])
                                 @AppStorage("MongoURI") var mongoURI: String = uri
                                 
@@ -125,7 +133,7 @@ struct SignInView: View {
                 Rectangle().frame(height: 1).opacity(0.1)
             }
             
-            Text("Get the connection string from Connect > Connect your application > Copy URI from step 2. Use the below documentation for additional help")
+            Text("Connect > Connect your application > Copy URI from step 2.")
                 .customFont(.subheadline)
                 .foregroundColor(.secondary)
             

@@ -15,7 +15,7 @@ struct CustomTextField: ViewModifier {
         content
             .padding(15)
             .padding(.leading, 36)
-            .background(.white)
+            .background(Color(.systemBackground))
             .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
