@@ -47,7 +47,6 @@ struct ShowDocumentsView: View {
     var index = 1
     
     @State private var searchText: String = ""
-    @State private var displayedRange: Range<Int> = 0..<5
     
     var body: some View {
         NavigationView {
@@ -61,11 +60,6 @@ struct ShowDocumentsView: View {
                             ForEach(documentsResult.filter { self.searchText.isEmpty ? true : $0.description.range(of: self.searchText, options: [.caseInsensitive, .regularExpression]) != nil }, id: \.self) { result in
                                 DocumentCardView(result: result)
                             }
-                            if displayedRange.upperBound < documentsResult.count {
-                                Button("Load More") {
-                                    self.displayedRange = self.displayedRange.lowerBound + 10..<min(self.displayedRange.upperBound + 10, self.documentsResult.count)
-                                }
-                            }
                         }
                     }
                 }
@@ -74,6 +68,7 @@ struct ShowDocumentsView: View {
             }
             .navigationBarItems(trailing:
                 Button {
+                documentsResult = [JSON]()
                     withAnimation {
                         showDocuments.toggle()
                     }

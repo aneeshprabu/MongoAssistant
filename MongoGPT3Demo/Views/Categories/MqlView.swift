@@ -273,7 +273,13 @@ struct MqlView: View {
             AF.request(schemaApiUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
                 
                 if let data = response.data {
-                    schema = String(decoding: data, as: UTF8.self)
+                    var inputString = String(decoding: data, as: UTF8.self)
+                    var outputString = inputString.replacingOccurrences(of: "^\"|\"$", with: "", options: .regularExpression)
+                        .replacingOccurrences(of: "{", with: "\n{\n")
+                        .replacingOccurrences(of: "}", with: "\n}\n")
+                        .replacingOccurrences(of: ",", with: ",\n")
+                        .replacingOccurrences(of: "\t", with: "\u{0009}")
+                    schema = outputString
                     print("\n--------Schema-------- \n\(schema)")
                     DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
                         isLoading = false
@@ -308,12 +314,17 @@ struct MqlView: View {
         
         chatGPTResponse(for: finalContext) { result in
             // Append the message and response to the conversation
-            var filterResponse = result
-            filterResponse.removeFirst()
-            filterResponse.removeLast()
-            filterResponse = filterResponse.replacingOccurrences(of: "\n", with: "", options: NSString.CompareOptions.literal, range: nil)
-            print("RESPONSE: - \(filterResponse)")
-            response = filterResponse
+            let inputString = result
+            var outputString = inputString.replacingOccurrences(of: "^\"|\"$", with: "", options: .regularExpression)
+                .replacingOccurrences(of: "{", with: "\n{\n")
+                .replacingOccurrences(of: "}", with: "\n}\n")
+                .replacingOccurrences(of: ",", with: ",\n")
+                .replacingOccurrences(of: "\t", with: "\u{0009}")
+//            if let range = outputString.range(of: ":") {
+//                outputString = outputString.replacingOccurrences(of: ":", with: ":\n\n", options: .regularExpression, range: range)
+//            }
+            print("RESPONSE: - \(outputString)")
+            response = outputString
             isLoading = false
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
