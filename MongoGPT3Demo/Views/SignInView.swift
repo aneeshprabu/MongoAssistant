@@ -13,7 +13,7 @@ import SwiftyJSON
 struct SignInView: View {
     
     @State var uri = ""
-    let mongoApiUrl = "https://mongo-assistant-app.azurewebsites.net/api/v1/uri"
+    let mongoApiUrl = "https://{AzureURI}/api/v1/uri"
     
     // For SignIn process
     @State var isLoading = false
