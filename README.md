@@ -1,4 +1,7 @@
-#  Mongo Assistant
+
+<img src="Images/GithubRepo.png" width=50% height=50%>
+
+
 
 ### How to open
 

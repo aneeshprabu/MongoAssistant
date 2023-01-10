@@ -20,6 +20,7 @@
 		A72BF1A3296D3AB9009963FA /* connect.png in Resources */ = {isa = PBXBuildFile; fileRef = A72BF1A2296D3AB9009963FA /* connect.png */; };
 		A72BF1A5296D3B27009963FA /* mql.png in Resources */ = {isa = PBXBuildFile; fileRef = A72BF1A4296D3B26009963FA /* mql.png */; };
 		A72BF1A7296D3B4B009963FA /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = A72BF1A6296D3B4B009963FA /* chat.png */; };
+		A72BF1A9296D4116009963FA /* GithubRepo.png in Resources */ = {isa = PBXBuildFile; fileRef = A72BF1A8296D4115009963FA /* GithubRepo.png */; };
 		A73417142964C79F006E9982 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73417132964C79F006E9982 /* Collection.swift */; };
 		A7341716296613DE006E9982 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7341715296613DE006E9982 /* Database.swift */; };
 		A734171829661641006E9982 /* AssistantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734171729661641006E9982 /* AssistantResponse.swift */; };
@@ -69,6 +70,7 @@
 		A72BF1A2296D3AB9009963FA /* connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connect.png; sourceTree = "<group>"; };
 		A72BF1A4296D3B26009963FA /* mql.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mql.png; sourceTree = "<group>"; };
 		A72BF1A6296D3B4B009963FA /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		A72BF1A8296D4115009963FA /* GithubRepo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GithubRepo.png; sourceTree = "<group>"; };
 		A73417132964C79F006E9982 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		A7341715296613DE006E9982 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A734171729661641006E9982 /* AssistantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantResponse.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				A72BF1A2296D3AB9009963FA /* connect.png */,
 				A78559DE29417EDC005239A2 /* login.png */,
 				A72BF1A6296D3B4B009963FA /* chat.png */,
+				A72BF1A8296D4115009963FA /* GithubRepo.png */,
 				A72BF1A4296D3B26009963FA /* mql.png */,
 			);
 			path = Images;
@@ -362,6 +365,7 @@
 				A78559D22941684E005239A2 /* Assets.xcassets in Resources */,
 				A77D10D02958D4A3002C9DD4 /* icons.riv in Resources */,
 				A77D10DE2958E965002C9DD4 /* Inter-Regular.ttf in Resources */,
+				A72BF1A9296D4116009963FA /* GithubRepo.png in Resources */,
 				A750B20B29627ECB002AD45A /* menu_button.riv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
