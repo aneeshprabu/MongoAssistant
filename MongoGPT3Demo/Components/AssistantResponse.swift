@@ -159,7 +159,7 @@ struct AssistantResponse: View {
     func executeQuery() {
         isLoading = true
         if let mongoURI = UserDefaults.standard.string(forKey: "MongoURI") {
-            let queryApiUrl = "https://mongo-assistant-app.azurewebsites.net/api/v1/uri/query"
+            let queryApiUrl = "https://{AzureURI}/api/v1/uri/query"
             /*
              {
                "uri": "string",
