@@ -1,4 +1,4 @@
-#  MongoDB + GPT3 Query Gen
+#  Mongo Assistant
 
 ### How to open
 
@@ -8,7 +8,22 @@
 - Select a simulator on the top MongoGPT3Demo > Iphone 14 Pro (or any simulator that you like)
 - Press play button on top left to build and run
 
-### Login Page
+### Connect to Atlas
 
-<img src="Images/login.png" width=50% height=50%>
+Connect your application to Atlas to execute generate MQL quries
+
+<img src="Images/connect.png" width=50% height=50%>
+
+
+### Generate MQL queries with Natural Language
+
+
+<img src="Images/mql.png" width=50% height=50%>
+
+
+### Learn more about MongoDB
+
+
+<img src="Images/chat.png" width=50% height=50%>
+
 
