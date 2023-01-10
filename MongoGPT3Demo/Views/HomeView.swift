@@ -19,8 +19,8 @@ struct HomeView: View {
     @State var collectionsLoaded = false
     let check = RiveViewModel(fileName: "check")
     
-    let databaseApiUrl = "https://mongo-assistant-app.azurewebsites.net/api/v1/uri/databases"
-    let collectionsApiUrl = "https://mongo-assistant-app.azurewebsites.net/api/v1/uri/collections"
+    let databaseApiUrl = "https://{AzureURI}/api/v1/uri/databases"
+    let collectionsApiUrl = "https://{AzureURI}/api/v1/uri/collections"
 
     
     @State var dbs : [DB] = dbItems
