@@ -24,8 +24,6 @@
 		A73B27F9294EB00D00769DD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B27F8294EB00D00769DD6 /* ContentView.swift */; };
 		A74832B529673896006CFAE7 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74832B429673896006CFAE7 /* ActivityIndicator.swift */; };
 		A74832B729673FA3006CFAE7 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74832B629673FA3006CFAE7 /* Type.swift */; };
-		A750B204295F5816002AD45A /* MongoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B203295F5816002AD45A /* MongoData.swift */; };
-		A750B206295F5848002AD45A /* ChatGPTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B205295F5848002AD45A /* ChatGPTData.swift */; };
 		A750B209295F5AF9002AD45A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A750B208295F5AF9002AD45A /* Alamofire */; };
 		A750B20B29627ECB002AD45A /* menu_button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A750B20A29627ECB002AD45A /* menu_button.riv */; };
 		A750B20D2962848D002AD45A /* VCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750B20C2962848D002AD45A /* VCard.swift */; };
@@ -48,7 +46,6 @@
 		A77D10E82959223B002C9DD4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10E72959223B002C9DD4 /* CustomTextField.swift */; };
 		A77D10EA29592410002C9DD4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D10E929592410002C9DD4 /* Extensions.swift */; };
 		A78559CE2941684C005239A2 /* MongoGPT3DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */; };
-		A78559D02941684C005239A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78559CF2941684C005239A2 /* LoginView.swift */; };
 		A78559D22941684E005239A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78559D12941684E005239A2 /* Assets.xcassets */; };
 		A78559D52941684E005239A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78559D42941684E005239A2 /* Preview Assets.xcassets */; };
 		A78559DC29417E42005239A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A78559DB29417E42005239A2 /* README.md */; };
@@ -72,8 +69,6 @@
 		A73B27F8294EB00D00769DD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A74832B429673896006CFAE7 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A74832B629673FA3006CFAE7 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
-		A750B203295F5816002AD45A /* MongoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoData.swift; sourceTree = "<group>"; };
-		A750B205295F5848002AD45A /* ChatGPTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTData.swift; sourceTree = "<group>"; };
 		A750B20A29627ECB002AD45A /* menu_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_button.riv; sourceTree = "<group>"; };
 		A750B20C2962848D002AD45A /* VCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCard.swift; sourceTree = "<group>"; };
 		A750B210296284B8002AD45A /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
@@ -95,7 +90,6 @@
 		A77D10E929592410002C9DD4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A78559CA2941684C005239A2 /* MongoGPT3Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongoGPT3Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoGPT3DemoApp.swift; sourceTree = "<group>"; };
-		A78559CF2941684C005239A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A78559D12941684E005239A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A78559D42941684E005239A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A78559DB29417E42005239A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -139,15 +133,6 @@
 				A750B21329628F07002AD45A /* HomeView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A750B202295F57E3002AD45A /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				A750B203295F5816002AD45A /* MongoData.swift */,
-				A750B205295F5848002AD45A /* ChatGPTData.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		A750B20E296284B8002AD45A /* Model */ = {
@@ -219,8 +204,6 @@
 			children = (
 				A77D10E12958EA04002C9DD4 /* Info.plist */,
 				A78559CD2941684C005239A2 /* MongoGPT3DemoApp.swift */,
-				A78559CF2941684C005239A2 /* LoginView.swift */,
-				A750B202295F57E3002AD45A /* Data */,
 				A750B20E296284B8002AD45A /* Model */,
 				A7E456DB2963D3C0005AE2BE /* Components */,
 				A73B27F7294EAFEE00769DD6 /* Views */,
@@ -382,7 +365,6 @@
 				A750B212296284B8002AD45A /* Feature.swift in Sources */,
 				A750B21429628F07002AD45A /* HomeView.swift in Sources */,
 				A77D10E82959223B002C9DD4 /* CustomTextField.swift in Sources */,
-				A750B206295F5848002AD45A /* ChatGPTData.swift in Sources */,
 				A77D10E629591CC3002C9DD4 /* SignInView.swift in Sources */,
 				A7E456DA2963BD0A005AE2BE /* MenuRow.swift in Sources */,
 				A7E456E02963D4A9005AE2BE /* ChatGPTView.swift in Sources */,
@@ -392,12 +374,10 @@
 				A77D10EA29592410002C9DD4 /* Extensions.swift in Sources */,
 				A750B20D2962848D002AD45A /* VCard.swift in Sources */,
 				A74832B529673896006CFAE7 /* ActivityIndicator.swift in Sources */,
-				A750B204295F5816002AD45A /* MongoData.swift in Sources */,
 				A73B27F9294EB00D00769DD6 /* ContentView.swift in Sources */,
 				A77D10D52958D527002C9DD4 /* OnBoardingView.swift in Sources */,
 				A7E456D8296379B8005AE2BE /* SideMenu.swift in Sources */,
 				A7E456DE2963D49B005AE2BE /* MqlView.swift in Sources */,
-				A78559D02941684C005239A2 /* LoginView.swift in Sources */,
 				A78559CE2941684C005239A2 /* MongoGPT3DemoApp.swift in Sources */,
 				A7341716296613DE006E9982 /* Database.swift in Sources */,
 				A716AACB296718C200C3EA0D /* chatGPTResponse.swift in Sources */,
