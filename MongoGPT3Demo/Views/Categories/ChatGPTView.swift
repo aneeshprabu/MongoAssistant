@@ -16,75 +16,117 @@ struct ChatGPTView: View {
     ]
     @Binding var showChatGPTView: Bool
     @State private var isLoading: Bool = false
-    
-
+    @State private var copied = false
 
     var body: some View {
         NavigationView {
-            ScrollView(.vertical) {
-                ForEach(conversation, id: \.id) { message in
-                    HStack {
-                        Spacer()
-                        VStack {
-                            if message.isResponse {
-                                HStack {
-                                    Image(systemName: "cpu")
-                                        .padding(12)
-                                        .background(Color("MongoGreen").opacity(0.2))
-                                        .mask(Circle())
-                                        .frame(maxWidth: .infinity, alignment: .leading)
+            VStack {
+                ScrollView(.vertical) {
+                    ScrollViewReader { proxy in
+                        ForEach(conversation, id: \.id) { message in
+                            HStack {
+                                Spacer()
+                                VStack {
+                                    if message.isResponse {
+                                        HStack {
+                                            Image(systemName: "cpu")
+                                                .padding(12)
+                                                .background(Color("MongoGreen").opacity(0.2))
+                                                .mask(Circle())
+                                                .frame(maxWidth: .infinity, alignment: .leading)
 
-                                    Text("Assistant")
-                                        .customFont(.body).opacity(0.7)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .offset(x:-120)
-                                    
+                                            Text("Assistant")
+                                                .customFont(.body).opacity(0.7)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .offset(x:-120)
+                                                .padding(.leading, 10)
+                                            Button {
+                                                UIPasteboard.general.string = message.text
+                                                self.copied = true
+                                            } label: {
+                                                Image(systemName: "doc.on.clipboard")
+//                                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                            }
+                                            .padding(.trailing, 20)
+                                            
+                                        }
+                                        .padding(.top, 10)
+                                        
+                                        CodeEditor(source: "\n" + message.text + "\n", language: .json, theme: .atelierSavannaDark, flags: [.selectable, .smartIndent])
+                                            .frame(maxWidth: .infinity, minHeight: 150, maxHeight: .infinity, alignment: .leading)
+                                            .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                                            .padding(10)
+                                            .onAppear(perform: {
+                                                withAnimation(.spring()) {
+                                                    proxy.scrollTo("Last", anchor: .bottom)
+                                                }
+                                            })
+                                    }
+                                    else {
+                                        HStack {
+                                            Text(message.text)
+                                                .padding(10)
+                                                .foregroundColor(Color.white)
+                                                .background(Color.blue)
+                                                .cornerRadius(10)
+                                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                            Image(systemName: "person")
+                                                .padding(12)
+                                                .background(.blue.opacity(0.2))
+                                                .mask(Circle())
+                                        }.onAppear(perform: {
+                                            withAnimation(.spring()) {
+                                                proxy.scrollTo("Last", anchor: .bottom)
+                                            }
+                                        })
+                                    }
                                 }
-                                
-                                CodeEditor(source: "\n" + message.text + "\n", language: .javascript, theme: .ocean, flags: [.selectable, .smartIndent])
-                                    .frame(maxWidth: .infinity, minHeight: 200, alignment: .leading)
-                                    .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             }
-                            else {
-                                HStack {
-                                    Text(message.text)
-                                        .padding(10)
-                                        .foregroundColor(Color.white)
-                                        .background(Color.blue)
-                                        .cornerRadius(10)
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                    Image(systemName: "person")
-                                        .padding(12)
-                                        .background(.blue.opacity(0.2))
-                                        .mask(Circle())
-                                }
-                            }
-                            
                         }
-                        Spacer()
+                        HStack {
+                            Spacer()
+                        }
+                        .id("Last")
                     }
                 }
+                .blur(radius: isLoading || copied ? 30 : 0)
+                .alert(isPresented: $copied) {
+                    Alert(title: Text("Copied"), message: Text("Text copied to clipboard"), dismissButton: .default(Text("Ok"), action: { self.copied = false }))
+                }
+                .overlay {
+                    if isLoading {
+                        // Add a loading animation while waiting for a response
+                        ActivityIndicator(isAnimating: isLoading)
+                    }
+                }
+                .allowsHitTesting(!isLoading)
+                .padding(.top, 20)
+                
                 Spacer()
+                
                 HStack {
                     TextField("Enter your message...", text: $inputText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Button(action: sendMessage) {
-                        Text("Send")
+                    
+                    Button {
+                        if inputText != "" {
+                            UIApplication.shared.keyWindow?.endEditing(true)
+                            sendMessage()
+                        }
+                    } label: {
+                        Image(systemName: "paperplane.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 34, height: 34, alignment: .trailing)
                     }
                 }
-                .mask(Rectangle())
                 .padding()
-                .frame(maxHeight: .infinity, alignment: .bottom)
-                
-                if isLoading {
-                    // Add a loading animation while waiting for a response
-                    ActivityIndicator(isAnimating: isLoading)
-                }
+                .padding(.bottom, 5)
+
             }
-            .keyboardResponsive()
+//            .keyboardResponsive()
             .navigationBarTitle("Let's Chat", displayMode: .large)
-            .edgesIgnoringSafeArea(.bottom)  // Ignore the safe area at the bottom
             .background(
                 Image("Spline")
                 .ignoresSafeArea()
@@ -102,15 +144,26 @@ struct ChatGPTView: View {
                         .foregroundColor(.white)
                         .mask(Circle())
                         .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 10)
-                }
-            )
+            })
         }
     }
 
     func sendMessage() {
+        let joinedString = conversation.map({ $0.text }).joined(separator: ". ")
+        
         conversation.append(Message(text: inputText, isResponse: false))
         let context = "All questions asked will be related to MongoDB. I expect every answer you provide to be related to MongoDB. "
-        let queryText = context + inputText
+        var queryText = context
+        
+//        if conversation.count > 0 {
+//            queryText = queryText + joinedString + ". " + inputText
+//        }
+//        else {
+//            queryText = queryText + inputText
+//        }
+        
+        queryText = queryText + inputText
+        
         inputText = ""
         isLoading = true
         chatGPTResponse(for: queryText) { response in

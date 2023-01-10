@@ -98,7 +98,7 @@ struct OnBoardingView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 CodeEditor(source: "\n\(mongoURI)", language: .swift, theme: .ocean)
                     .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .frame(maxHeight: 100)
+                    .frame(maxHeight: 150)
                 
                 Spacer()
                 

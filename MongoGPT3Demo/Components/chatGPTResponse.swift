@@ -8,6 +8,7 @@ import Alamofire
 import SwiftUI
 
 struct Message {
+
     let text: String
     let isResponse: Bool
     let id = UUID()

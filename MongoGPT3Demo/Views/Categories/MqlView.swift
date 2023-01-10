@@ -34,7 +34,7 @@ struct MqlView: View {
     @State var types : [Type] = typeItems
     
     
-    
+    @State var atlasConnected = false
     @State var query = ""
     @State var showAlert = false
     
@@ -177,12 +177,12 @@ struct MqlView: View {
                     }
                 }
                 .navigationBarHidden(true)
-                .blur(radius: showResponse || isLoading ? 30 : 0)
+                .blur(radius: showResponse || isLoading ? 100 : 0)
                 .allowsHitTesting(!isLoading || !showResponse)
             }
 
             if showResponse {
-                AssistantResponse(showResponse: $showResponse, collections: $collections, selectedCollection: $selectedCollection, dbs: $dbs, selectedDb: $selectedDb, response: $response, chatResponses: $chatResponses, mongoAssistants: $mongoAssistants).transition(.move(edge: .bottom)).zIndex(2)
+                AssistantResponse(showResponse: $showResponse, collections: $collections, selectedCollection: $selectedCollection, dbs: $dbs, selectedDb: $selectedDb, response: $response, chatResponses: $chatResponses, mongoAssistants: $mongoAssistants, atlasConnected: $atlasConnected).transition(.move(edge: .bottom)).zIndex(2)
             }
             if isLoading {
                 // Add a loading animation while waiting for a response
@@ -273,8 +273,8 @@ struct MqlView: View {
             AF.request(schemaApiUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
                 
                 if let data = response.data {
-                    var inputString = String(decoding: data, as: UTF8.self)
-                    var outputString = inputString.replacingOccurrences(of: "^\"|\"$", with: "", options: .regularExpression)
+                    let inputString = String(decoding: data, as: UTF8.self)
+                    let outputString = inputString.replacingOccurrences(of: "^\"|\"$", with: "", options: .regularExpression)
                         .replacingOccurrences(of: "{", with: "\n{\n")
                         .replacingOccurrences(of: "}", with: "\n}\n")
                         .replacingOccurrences(of: ",", with: ",\n")
@@ -297,18 +297,28 @@ struct MqlView: View {
         isLoading = true
         
         var context = ""
-        if selectedType.type == "CRUD" {
-            context = "Write a MongoDB Query."
+        var schemaContext = ""
+        var finalContext = ""
+        let wraps = "Wrap properties, operators and fields in double quotes. Return the mongodb query with the operators such as $gt, $lt in single quotes. Example: {'$gt': 3}"
+        
+        if selectedType.queryType == .crud {
+            context = "Write a MongoDB MQL Query. "
         } else {
-            context = "Write a MongoDB Aggregation pipeline."
+            context = "Write a MongoDB Aggregation pipeline. "
         }
         
-        _ = "From database \(selectedDb.database)."
-        let collectionMessage = ". Using the collection \"\(selectedCollection.collection)\". "
+        if selectedDb.database != "None" || selectedCollection.collection != "None" {
+            schemaContext = "Use the following as mongoDB collection schema to write the query: \n\(schema). "
+            let collectionMessage = "Using the collection \"\(selectedCollection.collection)\". "
+            finalContext = context + schemaContext + query + ". " + collectionMessage + wraps
+            atlasConnected = true
+        }
+        else {
+            finalContext = context + query + ". " + wraps
+            atlasConnected = false
+        }
         
-        let schemaContext = "Use the following as mongoDB collection schema to write the MQL query: \n\(schema)."
         
-        let finalContext = context + schemaContext + query + collectionMessage
         print("Query: \n\(finalContext)")
         
         
@@ -316,9 +326,9 @@ struct MqlView: View {
             // Append the message and response to the conversation
             let inputString = result
             var outputString = inputString.replacingOccurrences(of: "^\"|\"$", with: "", options: .regularExpression)
-                .replacingOccurrences(of: "{", with: "\n{\n")
-                .replacingOccurrences(of: "}", with: "\n}\n")
-                .replacingOccurrences(of: ",", with: ",\n")
+//                .replacingOccurrences(of: "{", with: "\n{\n")
+//                .replacingOccurrences(of: "}", with: "\n}\n")
+//                .replacingOccurrences(of: ",", with: ",\n")
                 .replacingOccurrences(of: "\t", with: "\u{0009}")
 //            if let range = outputString.range(of: ":") {
 //                outputString = outputString.replacingOccurrences(of: ":", with: ":\n\n", options: .regularExpression, range: range)

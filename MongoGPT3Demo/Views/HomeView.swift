@@ -79,6 +79,18 @@ struct HomeView: View {
             // Get Databases
             getDatabases(mongoURI: mongoURI)
             
+        } else {
+            dbs = [DB(tag: 1, database: "None")]
+            collections = [Collection(collection: "None", tag: 1)]
+            selectedDb = dbs[0]
+            selectedCollection = collections[0]
+            DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+//                check.triggerInput("Check")
+                isLoading = false
+            })
+            withAnimation(.spring()) {
+                showMqlView.toggle()
+            }
         }
     }
     
