@@ -198,7 +198,7 @@ struct MqlView: View {
     
     func getCollections() {
         
-        let collectionsApiUrl = "https://mongo-assistant-app.azurewebsites.net/api/v1/uri/collections"
+        let collectionsApiUrl = "https://{AzureURI}/api/v1/uri/collections"
         
         //MARK: - Parameters
         let parameters: Parameters = [
@@ -251,7 +251,7 @@ struct MqlView: View {
         if let mongoURI = UserDefaults.standard.string(forKey: "MongoURI") {
             isLoading = true
             
-            let schemaApiUrl = "https://mongo-assistant-app.azurewebsites.net/api/v1/uri/schema"
+            let schemaApiUrl = "https://{AzureURI}/api/v1/uri/schema"
             
             //MARK: - Parameters
             let parameters: Parameters = [
