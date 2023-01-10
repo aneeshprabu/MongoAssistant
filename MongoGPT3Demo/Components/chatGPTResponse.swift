@@ -16,7 +16,7 @@ struct Message {
 
 func chatGPTResponse(for message: String, completion: @escaping (String) -> Void) {
     
-    let chatGPTApiUri = "https://mongo-assistant-app.azurewebsites.net/api/v1/openai"
+    let chatGPTApiUri = "https://{AzureURI}/api/v1/openai"
     
     let query = message
     let parameters: Parameters = [
