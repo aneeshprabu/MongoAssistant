@@ -1,3 +1,12 @@
 workflows:
-  my-workflow:
+  mongo-assistant-workflow:
     instance_type: mac_pro
+    name: Mongo Assistant Pipeline
+    scripts:
+        - name: CICD Started
+        script: echo "Welcome to Mongo Assistant. Please wait while we test your build!"
+    publishing:
+        email:
+            recipients::
+                - aneesh.prabu@gmail.com
+    
