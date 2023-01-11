@@ -4,7 +4,13 @@
 
 <p align="center">Build with <a href="https://codemagic.io/start/" target="_blank">CodeMagic</a> framework</p>
 
-![SwiftUI](https://img.shields.io/badge/SwiftUI-orange.svg) ![iOS](https://img.shields.io/badge/os-iOS-green.svg?style=flat) ![Build](https://api.codemagic.io/apps/63be3abdc21f171fa5cf115d/mongo-assistant-workflow/status_badge.svg)
+<div align="center">
+
+  <a href="">![SwiftUI](https://img.shields.io/badge/SwiftUI-orange.svg)</a>
+  <a href="">![iOS](https://img.shields.io/badge/os-iOS-green.svg?style=flat)</a>
+  <a href="">![Build](https://api.codemagic.io/apps/63be3abdc21f171fa5cf115d/mongo-assistant-workflow/status_badge.svg)</a>
+
+</div>
 
 # Mongo Assistant
 #### A new way to access and manage your MongoDB
