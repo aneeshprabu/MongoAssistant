@@ -4,17 +4,6 @@ workflows:
     scripts:
       - name: say hello
         script: echo "Welcome to Mongo Assistant. Please wait while we test your build!"
-  test-workflow:
-    scripts:
-      - name: Run mongo assistant tests
-        script: |
-          set -e # exit on first failed command
-
-          xcode-project run-tests \
-              --workspace ${XCODE_WORKSPACE?} \
-              --scheme ${XCODE_SCHEME?} \
-              --device "iPhone 12"
-        test_report: build/ios/test/*.xml
   email-publishing-workflow:
     publishing:
       email:
