@@ -42,8 +42,8 @@ The application also can convert Natural Language to Aggregation pipeline querie
 
 ## 🧠 FastAPI (Backend)
 
-The brain of Mongo Assistant. Please visit the below link.
- [](Link)
+The brain of Mongo Assistant. We have continuous deployment setup for FastAPI as well. Please visit the below repository for more information. 
+ [https://dev.azure.com/anjanajayakumar0012/Mongo%20Assistant](https://dev.azure.com/anjanajayakumar0012/Mongo%20Assistant)
 
 
 ![https://i.imgur.com/nVqHAqa.png](https://i.imgur.com/nVqHAqa.png)
