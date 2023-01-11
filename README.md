@@ -57,6 +57,10 @@ The brain of Mongo Assistant. Please visit the below link.
 - APIs will not work because the strings are empty for security and cost reasons purposes
 **Please DM me for the URL**
 
+## CICD using CodeMagic
+
+![https://i.imgur.com/Ycgnm1C.png](https://i.imgur.com/Ycgnm1C.png)
+
 
 ## Connect to Atlas
 
