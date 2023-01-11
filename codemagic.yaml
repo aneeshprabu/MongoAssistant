@@ -6,8 +6,8 @@ workflows:
         script: echo "Creating Build"
         
           xcodebuild build \
-          -workspace "MongoGPT3Demo.xcworkspace" \
-          -scheme "MongoGPT3Demo" \
+          -workspace MongoGPT3Demo.xcworkspace \
+          -scheme MongoGPT3Demo \
           CODE_SIGN_INDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO
