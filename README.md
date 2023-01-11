@@ -59,6 +59,8 @@ The brain of Mongo Assistant. Please visit the below link.
 
 ## CICD using CodeMagic
 
+Code magic builds the app without code signing. Code signing requires a Apple 99$ Development subscription. If I had the subscription I can setup App connect and link testflight to it. When the app builds it'll get deployed in TestFlight which can be used by people to test the app.
+
 ![https://i.imgur.com/Ycgnm1C.png](https://i.imgur.com/Ycgnm1C.png)
 
 
