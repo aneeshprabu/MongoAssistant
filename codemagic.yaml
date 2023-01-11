@@ -6,7 +6,7 @@ workflows:
         script: echo "Creating Build"
         
       - name: Build Project
-        script: xcodebuild build -disableAutomaticPackageResolution -workspace "MongoGPT3Demo.xcworkspace" -scheme "MongoGPT3Demo" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+        script: xcodebuild build -disableAutomaticPackageResolution -workspace "project.xcworkspace" -scheme "MongoGPT3Demo" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
         
 
     publishing:
