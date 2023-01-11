@@ -15,6 +15,25 @@ workflows:
               --scheme ${XCODE_SCHEME?} \
               --device "iPhone 12"
         test_report: build/ios/test/*.xml
-        
+  email-publishing-workflow:
+    publishing:
+      email:
+        recipients:
+          - aneesh.prabu@gmail.com
+  push-to-master-workflow:
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: develop
+          include: false
+      cancel_previous_builds: true
+  pr-workflow:
+    triggering:
+      events:
+        - pull_request
+      branch_patterns:
+        - pattern: master
+      cancel_previous_builds: true
         
     
