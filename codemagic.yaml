@@ -4,6 +4,14 @@ workflows:
     scripts:
       - name: Run Build Pipeline for Mongo Assistant
         script: echo "Creating Build"
+        
+          xcodebuild build \
+          -workspace "MongoGPT3Demo.xcworkspace" \
+          -scheme "MongoGPT3Demo" \
+          CODE_SIGN_INDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
+        
 
     publishing:
       email:
@@ -17,6 +25,7 @@ workflows:
         - pattern: develop
           include: true
       cancel_previous_builds: true
+      
       
   tests-workflow:
     scripts:
