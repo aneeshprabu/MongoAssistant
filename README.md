@@ -1,18 +1,24 @@
 <p align="center">
-  <a href="https://i.imgur.com/Dc8R4IX.png" target="blank"><img src="https://i.imgur.com/Dc8R4IX.png" width="120" alt="Assistant Logo" /></a>
+  <a href="https://i.imgur.com/Dc8R4IX.png" target="blank"><img src="https://i.imgur.com/Dc8R4IX.png" width="300" alt="Assistant Logo" /></a>
 </p>
+
 <p align="center">Build with <a href="https://codemagic.io/start/" target="_blank">CodeMagic</a> framework</p>
 
 # Mongo Assistant
 #### A new way to access and manage your MongoDB
 
 <p align="center">
+  
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-orange.svg) ![iOS](https://img.shields.io/badge/os-iOS-green.svg?style=flat) ![Build](https://api.codemagic.io/apps/63be3abdc21f171fa5cf115d/mongo-assistant-workflow/status_badge.svg)
+
 </p>
+
 # 🤖 Architecture
+
 ![Mongo Assistant Architecture](https://i.imgur.com/D3DwODY.jpg)
 
 ## 📝 Description
+
 This application is a client app that can be substituted with any client app whether you are using React or any other cross platform applicaiton. In order to substitute all you have to do is incorporate the following APIs.
 
 # 🏛️ Frameworks and Libraries
@@ -25,8 +31,9 @@ This application is a client app that can be substituted with any client app whe
 
 
 # 🧠 FastAPI (Backend)
+
 The brain of Mongo Assistant. Please visit the below link.
- [https://github.com/leogomesdev/circuit-on-frontend](https://github.com/leogomesdev/circuit-on-frontend)
+ [](Link)
 
 
 ![https://i.imgur.com/nVqHAqa.png](https://i.imgur.com/nVqHAqa.png)
