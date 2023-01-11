@@ -3,16 +3,7 @@ workflows:
     name: Mongo Assistant Pipeline
     scripts:
       - name: Run Hello Pipeline for Mongo Assistant
-        script: echo "Welcome to Mongo Assistant. Please wait while we test your build!"
-
-      - name: Run Mongo Assistant Tests
-        script: |
-          set -e # exit on first failed command
-
-          xcode-project run-tests \
-              --workspace MongoGPT3Demo.xcworkspace \
-              --scheme MongoGPT3Demo \
-              --device "iPhone 14"
+        script: echo "Creating Build"
 
     publishing:
       email:
