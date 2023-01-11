@@ -21,7 +21,15 @@
 
 ## 📝 Description
 
-This application is a client app that can be substituted with any client app whether you are using React or any other cross platform applicaiton. In order to substitute all you have to do is incorporate the following APIs.
+This is the front end application for Mongo Assistant. Mongo Assistant is application that allows you to execute MQL directly on to you Atlas by using Natural Language. We have a Regex trans-compiler present in the backend that evaluates every MQL query and executes them.
+
+The trans-compiler uses a method mapper that maps MQL keywords to mongo driver methods. See the image below - 
+
+<p align="center">
+  <a href="https://i.imgur.com/rx4v94R.png" target="blank"><img src="https://i.imgur.com/rx4v94R.png" width="500" alt="method mapper" /></a>
+</p>
+
+The application also can convert Natural Language to Aggregation pipeline queries which can be copied and used in Atlas.
 
 ## 🏛️ Frameworks and Libraries
 
