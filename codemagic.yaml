@@ -1,12 +1,23 @@
 workflows:
   mongo-assistant-workflow:
     instance_type: mac_pro
+    environment:
+      xcode: 12.5
     name: Mongo Assistant Pipeline
     scripts:
-        - name: CICD Started
+      - name: say hello
         script: echo "Welcome to Mongo Assistant. Please wait while we test your build!"
-    publishing:
-        email:
-            recipients::
-                - aneesh.prabu@gmail.com
+  test-workflow:
+    scripts:
+      - name: Run mongo assistant tests
+        script: |
+          set -e # exit on first failed command
+
+          xcode-project run-tests \
+              --workspace ${XCODE_WORKSPACE?} \
+              --scheme ${XCODE_SCHEME?} \
+              --device "iPhone 12"
+        test_report: build/ios/test/*.xml
+        
+        
     
