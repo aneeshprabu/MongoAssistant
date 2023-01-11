@@ -1,7 +1,5 @@
 workflows:
   mongo-assistant-workflow:
-    environment:
-      xcode: 12.5
     name: Mongo Assistant Pipeline
     scripts:
       - name: say hello
