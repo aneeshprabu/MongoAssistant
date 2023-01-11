@@ -2,7 +2,7 @@
   <a href="https://i.imgur.com/Dc8R4IX.png" target="blank"><img src="https://i.imgur.com/Dc8R4IX.png" width="500" alt="Assistant Logo" /></a>
 </p>
 
-<p align="center">Build with <a href="https://codemagic.io/start/" target="_blank">CodeMagic</a> framework</p>
+<p align="center">Built with <a href="https://codemagic.io/start/" target="_blank">CodeMagic</a> framework</p>
 
 <div align="center">
 
