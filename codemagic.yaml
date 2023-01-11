@@ -17,3 +17,16 @@ workflows:
         - pattern: develop
           include: true
       cancel_previous_builds: true
+      
+  tests-workflow:
+    scripts:
+      - name: Run iOS tests
+        script: |
+          set -e # exit on first failed command
+
+          xcode-project run-tests \
+              --workspace MongoGPT3Demo.xcworkspace \
+              --scheme MongoGPT3Demo \
+              --device "iPhone 12"
+        test_report: build/ios/test/*.xml
+
