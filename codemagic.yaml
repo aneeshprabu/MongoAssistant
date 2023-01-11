@@ -2,22 +2,32 @@ workflows:
   mongo-assistant-workflow:
     name: Mongo Assistant Pipeline
     scripts:
-      - name: say hello
+      - name: Run Hello Pipeline for Mongo Assistant
         script: echo "Welcome to Mongo Assistant. Please wait while we test your build!"
-  email-publishing-workflow:
+
+      - name: Run Mongo Assistant Tests
+        script: |
+          set -e # exit on first failed command
+
+          xcode-project run-tests \
+              --workspace ${XCODE_WORKSPACE?} \
+              --scheme ${XCODE_SCHEME?} \
+              --device "iPhone 12"
+        test_report: build/ios/test/*.xml
+
     publishing:
       email:
         recipients:
-          - aneesh.prabu@gmail.com
-  push-to-master-workflow:
+          - aneeshprabu@gmail.com
+
     triggering:
       events:
         - push
       branch_patterns:
         - pattern: develop
-          include: false
+          include: true
       cancel_previous_builds: true
-  pr-workflow:
+
     triggering:
       events:
         - pull_request
@@ -25,7 +35,7 @@ workflows:
         - pattern: master
       cancel_previous_builds: true
 
-  build-using-cordova-workflow:
+
     scripts:
       - name: Install dependencies
         script: npm ci
