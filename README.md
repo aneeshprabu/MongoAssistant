@@ -10,6 +10,7 @@
 - Open MongoGPT3Demo.xcodeproj
 - Select a simulator on the top MongoGPT3Demo > Iphone 14 Pro (or any simulator that you like)
 - Press play button on top left to build and run
+- APIs will not work because the strings are empty for security purposes
 
 ### Connect to Atlas
 
